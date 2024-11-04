@@ -1,0 +1,45 @@
+syntax = "proto3";
+
+package rpc;
+
+service KVstore {
+    rpc Put(PutRq) returns Put(PutResp);
+    rpc Get(GetRq) returns Get(GetResp);
+    rpc Update(UpdateRq) returns Update(UpdateResp);
+    rpc Delete(DeleteReq) returns Delete(DeleteResp);
+}
+
+//implement proto oneof in order to handle potential different data types and collections
+
+message PutRq {
+    // figure out genericized types for K and V
+}
+
+message PutResp {
+
+}
+
+message GetRq {
+
+}
+
+message GetResp {
+
+}
+
+message UpdateRq {
+
+}
+
+message UpdateResp {
+
+}
+
+message DeleteReq {
+
+}
+
+message DeleteResp {
+
+}
+
