@@ -22,9 +22,7 @@ impl<K, V> KVDataStructure<K, V> where
 {
 
     pub fn new() -> Self {
-        Self {
-            data: Arc::new(Mutex::new(HashMap::new())),
-        }
+        Self { data: Arc::new(Mutex::new(HashMap::new())), }
     }
 
     pub async fn put(&self, key: K, value: V) {
