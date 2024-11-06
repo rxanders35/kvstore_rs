@@ -1,45 +1,64 @@
 syntax = "proto3";
 
-package rpc;
+package kv;
 
 service KVstore {
-    rpc Put(PutRq) returns Put(PutResp);
-    rpc Get(GetRq) returns Get(GetResp);
-    rpc Update(UpdateRq) returns Update(UpdateResp);
-    rpc Delete(DeleteReq) returns Delete(DeleteResp);
+    rpc Put(PutRq) returns (PutResp); 
+    rpc Get(GetRq) returns (GetResp);
+    rpc Update(UpdateRq) returns (UpdateResp);
+    rpc Delete(DeleteReq) returns (DeleteResp);
 }
 
 //implement proto oneof in order to handle potential different data types and collections
 
 message PutRq {
-    // figure out genericized types for K and V
+    Generic key = 1;
+    Generic value = 2;
 }
 
 message PutResp {
-
+    bool success = 1;
 }
 
 message GetRq {
-
+    Generic key = 1;
 }
 
 message GetResp {
-
+    Generic value = 1;
 }
 
 message UpdateRq {
-
+    Generic key = 1;
+    Generic value = 2;
 }
 
 message UpdateResp {
-
+    Generic value = 1;
 }
 
 message DeleteReq {
-
+    Generic key = 1;
 }
 
 message DeleteResp {
+    bool success = 1;
+}
 
+message Generic {
+    oneof kind {
+        string str = 1;
+        int32 int = 2;
+        IntVec int_vec = 3;
+        StrVec str_vec = 4;
+    }
+}
+
+message IntVec {
+    repeated int32 vec = 1;
+}
+
+message StrVec {
+    repeated string vec = 1;
 }
 
