@@ -9,6 +9,7 @@ pub mod proto {
 #[derive(Debug, Default)]
 struct KVService {}
 
+#[tonic::async_trait]
 impl KVstore for KVService {
    async fn put(
     &self, 
