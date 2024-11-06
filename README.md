@@ -9,6 +9,6 @@ I personally am very interested in this topic, and since I love learning Rust, I
 - [x] Core HashMap data structure (might change to BTreeMap or write my own)
 - [x] Protocol Buffer methods
 - [ ] Server and Client for Put, Get, Update, and Delete methods
-- [ ] Write-Ahead Log
-- [ ] Raft Consensus Algorithm
+- [ ] Write-Ahead Log (WAL) for persistent storage 
+- [ ] Raft Consensus Algorithm for data consistency across nodes
 - [ ] ???
