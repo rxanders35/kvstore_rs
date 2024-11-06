@@ -8,7 +8,7 @@ I personally am very interested in this topic, and since I love learning Rust, I
 #### To Do ####
 - [x] Core HashMap data structure (might change to BTreeMap or write my own)
 - [x] Protocol Buffer methods
-- [] Server for Put, Get, Update, and Delete methods
-- [] Write-Ahead Log
-- [] Raft Consensus Algorithm
-- [] Version Control ???
+- [ ] Server for Put, Get, Update, and Delete methods
+- [ ] Write-Ahead Log
+- [ ] Raft Consensus Algorithm
+- [ ] Version Control ???
